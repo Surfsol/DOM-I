@@ -52,28 +52,29 @@ let container = document.querySelector(".container");
 let header = document.querySelector("header");
 
 let nav = document.querySelector("nav");
+nav.style.background = 'purple';
 
-let nav1 = document.querySelectorAll("a .nav-item-1");
+let nav1 = document.querySelector(".nav-item-1");
 nav1.textContent = siteContent["nav"]["nav-item-1"];
 //nav1.style.color = "green";
 
-let nav2 = document.querySelectorAll("a .nav-item-2");
+let nav2 = document.querySelector(".nav-item-2");
 nav2.textContent = siteContent["nav"]["nav-item-2"];
 //nav2.style.color="green";
 
-let nav3 = document.querySelectorAll("a .nav-item-3");
+let nav3 = document.querySelector(".nav-item-3");
 nav3.textContent = siteContent["nav"]["nav-item-3"];
 //nav3.style.color="green";
 
-let nav4 = document.querySelectorAll("a .nav-item-4");
+let nav4 = document.querySelector(".nav-item-4");
 nav4.textContent = siteContent["nav"]["nav-item-4"];
 //nav4.style.color="green";
 
-let nav5 = document.querySelectorAll("a .nav-item-5");
+let nav5 = document.querySelector(".nav-item-5");
 nav5.textContent = siteContent["nav"]["nav-item-5"];
 //nav5.style.color="green";
 
-let nav6 = document.querySelectorAll("a .nav-item-6");
+let nav6 = document.querySelector(".nav-item-6");
 nav6.textContent = siteContent["nav"]["nav-item-6"];
 //nav6.style.color="green";
 
@@ -84,7 +85,7 @@ nav.appendChild(nav7);
 
 const navFirst = document.createElement("a");
 navFirst.textContent = "Home";
-navFirst.style.color = 'green';
+navFirst.style.color = "green";
 nav.prepend(navFirst);
 
 let cta = document.querySelector(".cta");
@@ -104,6 +105,13 @@ let topContent = document.querySelector("top-content");
 
 let textContent1h = document.querySelector(".text-content1 h4");
 textContent1h.textContent = siteContent["main-content"]["features-h4"];
+textContent1h.addEventListener("mouseover", event => {
+  event.target.style.background = "red";
+});
+
+textContent1h.addEventListener("mouseout", event => {
+  event.target.style.background = "blue";
+});
 
 let textContent1P = document.querySelector(".text-content1 p");
 textContent1P.textContent = siteContent["main-content"]["features-content"];

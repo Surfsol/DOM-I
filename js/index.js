@@ -52,8 +52,13 @@ let container = document.querySelector(".container");
 let header = document.querySelector("header");
 
 let nav = document.querySelector("nav");
-nav.style.background = 'purple';
 
+let navA = nav.querySelectorAll('a')
+navA.forEach((anc, index) =>{
+  anc.textContent = siteContent["nav"]["nav-item-" + [index + 1]];
+  anc.style.color = 'green';
+})
+/*
 let nav1 = document.querySelector(".nav-item-1");
 nav1.textContent = siteContent["nav"]["nav-item-1"];
 //nav1.style.color = "green";
@@ -77,7 +82,7 @@ nav5.textContent = siteContent["nav"]["nav-item-5"];
 let nav6 = document.querySelector(".nav-item-6");
 nav6.textContent = siteContent["nav"]["nav-item-6"];
 //nav6.style.color="green";
-
+*/
 const nav7 = document.createElement("a");
 nav7.textContent = "Videos";
 nav7.style.color = "green";
@@ -96,8 +101,8 @@ ctaH.textContent = siteContent["cta"]["h1"];
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = siteContent["cta"]["button"];
 
-let ctaImg = document.getElementById("#cta-img");
-//ctaImg.src = siteContent["cta"]["img/header-img.png"];
+let ctaImg = document.querySelector("#cta-img");
+ctaImg.src = siteContent["cta"]["img-src"];
 
 let mainContent = document.querySelector("main-content");
 
@@ -122,8 +127,8 @@ textContent1h.textContent = siteContent["main-content"]["about-h4"];
 let textContent2P = document.querySelector(".text-content2 p");
 textContent2P.textContent = siteContent["main-content"]["about-content"];
 
-let middleImg = document.getElementById("#middle-img");
-//middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 let bottomContent = document.querySelector(".bottom-content");
 
